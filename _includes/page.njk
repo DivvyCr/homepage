@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+    <head>
+	<meta charset="UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>{{ title }}</title>
+	<link rel="stylesheet" href="../../design/css/main.css">
+	<link rel="stylesheet" href="../../design/css/code.css">
+	<link rel="stylesheet" href="https://use.typekit.net/khs4nhq.css">
+    </head>
+    <body>
+	<div class="page">
+	    <div class="headline">
+		<h1 class="page-title">{{ title }}</h1>
+		<a href="/">
+		    <h1 class="logo">Andrei S.</h1>
+		</a>
+	    </div>
+	    <div class="page-content">{{ content | safe }}</div>
+	</div>
+    </body>
+</html>

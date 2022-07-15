@@ -1,0 +1,29 @@
+#
+# Ignore development files.
+#
+
+# 11ty:
+_site/
+node_modules/
+package-lock.json
+
+# Firebase:
+.firebaserc
+.firebase/
+firebase.json
+
+#
+# Ignore select content files.
+#
+
+# Ignoring images, but keeping a placeholder for the directory:
+assets/images/*
+!assets/images/Photo.png
+
+
+# Ignoring CSS output, since I use the Stylus preprocessor:
+design/css/
+
+# Ignoring drafts, which start with an underscore:
+blog/_*.md
+projects/_*.md

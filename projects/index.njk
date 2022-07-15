@@ -1,0 +1,8 @@
+---
+layout: ""
+eleventyExcludeFromCollections: true
+---
+
+{% import "collection.njk" as source %}
+
+{{ source.render(collections.projects, "Projects") }}
