@@ -16,10 +16,12 @@ firebase.json
 # Ignore select content files.
 #
 
-# Ignoring images, but keeping a placeholder for the directory:
+# Ignoring images, but keeping some placeholders for the directory:
+# (currently hiding some assets, but should be removed later)
 assets/images/*
 !assets/images/Photo.png
-
+!assets/images/Homepage-1.png
+!assets/images/Homepage-2.png
 
 # Ignoring CSS output, since I use the Stylus preprocessor:
 design/css/
