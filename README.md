@@ -1,15 +1,8 @@
-This repository contains the sources for my online homepage. Initially, this project was a way for
+This repository contains the sources for my online homepage. Initially, this project was a way for 
 me to get comfortable with the fundamentals of web development (ie. HTML and CSS), as I have no
 ambitions for building websites professionally. Having said that, I wanted to build something
-special, as opposed to an overly simplistic page of text or a 'modern' website that looks like any
-other template. Hence, I decided to design a unique homepage that would *slide sideways* to toggle
-between featured content and my photo, while my name and contact information always remained
-visible:
-
-<div>
-	<img src="/assets/images/Homepage-1.png" style="width:45%" />
-	<img src="/assets/images/Homepage-2.png" style="width:45%" />
-</div>
+special, as opposed to an overly simplistic page of text or a modern website that looks like any
+other template. Therefore, I settled on a minimal half-and-half design; see [**here**](https://andreist.dev/).
 
 ## Overview
 
@@ -27,10 +20,9 @@ personal websites and blogs.
 ## Development
 
 Locally, you have to run very little set-up to be able to work with the website. The prerequisites
-are to clone the repository and install all dependencies (ie. run `npm install` in the repository's
-directory).
+are to clone the repository and install all dependencies by running `npm ci` (for 'clean install').
 
 Then, if you are working with the template files, you only have to run `npx @11ty/eleventy --serve`
 to view the results on `localhost`. If you are also working with the design files (in Stylus), you
-will have to run `stylus design/stylus/main.styl -o design/css/main.css` to compile the CSS. Here,
+will have to run `stylus src/main.styl -o src/main.css` to compile the CSS. Here,
 you may also use the `-w` option to watch the files and auto-compile on any changes.

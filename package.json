@@ -1,27 +1,17 @@
 {
-  "name": "Website",
-  "version": "1.0.0",
-  "description": "Any harbour is a connection between the ocean and the land. In much the same way, this harbour is a connection, albeit between the online and the real. Many explorers may wonder in and glimpse into my life, and so I look to make my harbour both serene and sincere.",
+  "name": "dv-homepage",
+  "version": "1.1.0",
+  "description": "",
   "main": ".eleventy.js",
-  "devDependencies": {
-    "@11ty/eleventy": "^1.0.0",
-    "@11ty/eleventy-plugin-syntaxhighlight": "^4.0.0",
-    "luxon": "^2.4.0",
-    "markdown-it": "^13.0.1",
-    "markdown-it-attrs": "^4.1.4"
-  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "prebuild": "stylus src/main.styl -o src/main.css",
+    "build": "npx @11ty/eleventy",
+    "test": "npx @11ty/eleventy --serve"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/DivvyCr/my-online-harbour.git"
-  },
-  "keywords": [],
-  "author": "",
+  "author": "Divvy C.",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/DivvyCr/my-online-harbour/issues"
-  },
-  "homepage": "https://github.com/DivvyCr/my-online-harbour#readme"
+  "dependencies": {
+    "@11ty/eleventy": "^2.0.1",
+    "stylus": "^0.59.0"
+  }
 }

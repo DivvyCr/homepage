@@ -1,0 +1,246 @@
+default-dark = #0c0c0c
+alt-dark = #181818
+default-light = #fff
+alt-light = #a5a5a5
+
+// -------------
+// Fundamentals:
+
+html
+  color default-dark
+  background-color default-light
+
+a
+  text-decoration none
+  color inherit
+
+p > a
+  text-decoration underline
+  color inherit
+
+p
+  line-height 140%
+  margin 0
+  margin-top 5px
+  margin-bottom 10px
+
+ul
+  line-height 125%
+  margin 0
+  margin-bottom 10px
+
+hr
+  border none
+  border-top 3px dotted #AAA
+  margin 20px 0
+
+// --------------
+// Code snippets:
+
+pre
+  background #f4f4f4
+  border 1px solid #ddd
+  max-width 100%
+  overflow auto
+  padding 5px 10px
+  display block
+  word-wrap break-word
+
+:not(pre) > code
+  color #1f66e5
+  font-family source-code-pro, monospace
+  font-weight 400
+  font-size 18px  // Relative to 20px quasimoda.
+  background-color #dee8fb
+  border-radius 5px
+  padding 0 5px
+
+// ----------
+// Main page:
+
+body
+  margin 0
+  overflow-x hidden
+
+main
+  margin 0
+
+.grid
+  height 100vh
+  width 100vw
+  display grid
+  @media (max-width: 1200px)
+    grid-template-rows 1fr auto 1fr
+  @media (min-width: 1200px)
+    grid-template-columns 1fr 1fr
+
+  &.move
+    transform translateX(0vw)
+
+section
+  @media (min-width: 1200px)
+    height inherit
+  @media (max-width: 1200px)
+    min-height 100vh
+  display flex
+  align-self flex-start
+  flex-direction column
+  justify-content space-evenly
+
+.main-left
+  grid-column 1
+  grid-row 1
+  @media (max-width: 1200px)
+    grid-column 1
+    grid-row 1
+
+.main-right
+  position relative
+  grid-column 2
+  grid-row 1
+  background-color default-dark
+  @media (max-width: 1200px)
+    grid-column 1
+    grid-row 2
+
+.name,.caption
+  text-align center
+  margin 20px auto
+
+.name
+  font-family mister-brown, sans-serif
+  font-weight 400
+  font-style normal
+  font-size 180px
+  line-height 120px
+  white-space nowrap
+  color black
+  @media (max-width: 480px)
+    font-size 35vw
+
+.caption
+  font-family filson-pro, sans-serif
+  font-weight 400
+  font-size 40px
+
+.contact-links
+  display flex
+  flex-direction row
+  justify-content center
+  @media (max-width: 640px)
+    flex-direction column
+  margin-top 1.5rem
+
+.contact-link
+  margin 0 1rem
+
+.icon
+  width 50px
+  height 50px
+  @media (max-width: 480px)
+    width 10vw
+    height 10vw
+
+.projects
+  margin 0 5rem 0 0
+  @media (max-width: 640px)
+    width 90%
+    margin 0 auto
+
+  &-title
+    @media (max-width: 640px)
+      display none
+    position absolute
+    right -152px
+    margin 0
+    transform rotate(-90deg)
+    font-family quasimoda, sans-serif
+    font-weight 700
+    font-size 8rem
+    text-align center
+    user-select none
+    color default-light
+
+.project
+  position relative
+  z-index 1
+  width 80%
+  margin 0 auto 2rem
+  border-left .2rem solid alt-dark
+  border-radius .5rem
+  padding 1rem
+  color default-light
+  transition border-color .2s
+  @media (max-width: 640px)
+    width auto
+    margin 1rem auto
+
+  &:hover
+    border-color default-light
+
+  &-title
+    display flex
+    flex-direction row
+    flex-wrap wrap
+    justify-content space-between
+    font-family p22-underground-pc, sans-serif
+    font-size 2rem
+    font-weight 600
+    margin 0 0 .5rem
+    @media (max-width: 640px)
+      flex-direction column
+
+  &-description
+    font-family quasimoda, sans-serif
+    font-weight 400
+    font-size 1.25rem
+    color alt-light
+    margin 0
+
+  &-date
+    margin 0
+    margin-bottom 5px
+    color #AAA
+    font-family p22-underground-pc, sans-serif
+    font-weight 500
+    font-size 27px
+    @media (min-width: 640px)
+      align-self flex-end
+
+article
+  width 40vw
+  margin 0 auto
+  @media (max-width: 1200px)
+    width 65%
+  @media (max-width: 640px)
+    width 80%
+
+  & .title
+    font-family p22-underground-pc, sans-serif
+    font-size 2rem
+    margin 0
+
+  & .content
+    font-family quasimoda, sans-serif
+    font-weight 400
+    font-size 20px
+    margin-bottom 25px
+    position relative // In order for PROJECTS/BLOG title to work.
+
+header
+  display flex
+  flex-direction row
+  justify-content space-between
+  padding 1rem 0 0
+  @media (max-width: 640px)
+    flex-direction column-reverse
+    justify-content space-around
+    text-align center
+
+.logo
+  font-family mister-brown, sans-serif
+  font-size 3rem
+  line-height 0.75
+  margin 0
+  @media (max-width: 640px)
+    margin-bottom 20px

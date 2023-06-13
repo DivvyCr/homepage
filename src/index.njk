@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Andrei S.</title>
+  <link rel="stylesheet" href="/main.css">
+  <link rel="stylesheet" href="https://use.typekit.net/khs4nhq.css">
+</head>
+<body>
+<main class="grid">
+  <section class="main-left">
+    <div class="content">
+      <h1 class="name">Andrei S.</h1>
+      <div class="contact-links">
+        <a class="contact-link" href="https://www.github.com/DivvyCr/">
+          <img class="icon" alt="GitHub" src="/Logo-GitHub.svg"/>
+        </a>
+        <a class="contact-link" href="https://www.instagram.com/andrei.iirc/">
+          <img class="icon" alt="Twitter" src="/Logo-Instagram.svg"/>
+        </a>
+      </div>
+    </div>
+  </section>
+  <section class="main-right">
+    <h1 class="projects-title">BLOG</h1>
+    <div class="projects">
+      {% for post in (collections.blog | reverse).slice(0,3) %}
+      <a href="{{ post.url | url }}">
+        <div class="project">
+          <h2 class="project-title">{{ post.data.title }}</h2>
+          <p class="project-description">{{ post.data.description }}</p>
+        </div>
+      </a>
+      {% endfor %}
+    </div>
+  </section>
+</main>
+</body>
+</html>
